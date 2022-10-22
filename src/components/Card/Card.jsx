@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 // import axios from "axios";
 import { useState } from "react";
-import Email from "../assets/email.svg";
-import Location from "../assets/location.svg";
-import Phone from "../assets/phone.svg";
+import Email from "../../assets/email.svg";
+import Location from "../../assets/location.svg";
+import Phone from "../../assets/phone.svg";
 import "./card.css";
 
 const Card = () => {
@@ -17,9 +17,13 @@ const Card = () => {
       .then((data) => setRandom(data.results[0]));
   };
   console.log(random);
-  const { name, dob, email, picture } = random;
+  const { name, dob, email, picture, phone, location } = random;
 
-  //   const getRandoms = async () => {
+  useEffect(() => {
+    getRandom();
+  }, []);
+
+  //   const getRandom = async () => {
   //     try {
   //       const { results } = await axios(url);
   //       console.log(results[0]);
@@ -33,31 +37,36 @@ const Card = () => {
   //   };
 
   return (
-    <div className="container text-center">
+    <div className="container bg-info  text-center">
       <div className="mycard">
         <div className="card-top d-flex text-center justify-content-between">
-          <img
-            src="https://cdn.pixabay.com/photo/2022/08/26/04/19/beach-7411683_960_720.jpg"
-            alt=""
-          />
-          <h3>NAME</h3>
+          <img src={picture?.large} alt="" />
+          <h3>
+            {name?.title} {name?.first} {name?.last}
+          </h3>
         </div>
         <div className="card-bottom d-flex text-center justify-content-between">
           <img src={Email} alt="" />
-          <h3>...........</h3>
+          <h5>{email}</h5>
         </div>
         <div className="card-bottom d-flex text-center justify-content-between">
           <img src={Phone} alt="" />
-          <h3>...........</h3>
+          <h5>{phone}</h5>
         </div>
         <div className="card-bottom d-flex text-center justify-content-between">
           <img src={Location} alt="" />
-          <h3>..........</h3>
+          <h5>
+            {location?.city} {location?.country}
+          </h5>
+        </div>
+        <div>
+          <p>{dob?.age}</p>
+          <p>{dob?.date}</p>
         </div>
       </div>
       <div className="button">
         <button
-          className="bg-danger text-white p-2 rounded-2"
+          className="bg-info text-black p-2 rounded-2"
           onClick={getRandom}
         >
           RANDOM APP

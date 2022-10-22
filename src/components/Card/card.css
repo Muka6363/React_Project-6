@@ -1,13 +1,11 @@
 .container {
-  background-color: aqua;
   margin: 20rem auto;
-  border-radius: 2rem;
+  border-radius: 10px;
   box-shadow: 10px 10px 10px 5px;
-  height: 40rem;
+  width: 27rem;
+  height: 27rem;
 }
 
-.mycard {
-}
 .card-top {
   padding-bottom: 2rem;
   align-items: center;
@@ -15,8 +13,8 @@
 
 .card-top img {
   padding: 1rem;
-  width: 10rem;
-  height: 10rem;
+  width: 8rem;
+  height: 8rem;
   border-radius: 50%;
 }
 .card-bottom {
@@ -25,13 +23,13 @@
 }
 .card-bottom img {
   padding-left: 1rem;
-  width: 7rem;
+  width: 3rem;
+  margin-left: 1.5rem;
 }
 
 .button {
   margin-top: 6rem;
 }
 
-h3 {
-  text-align: center;
+h5 {
 }
