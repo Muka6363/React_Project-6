@@ -1,11 +1,14 @@
-.container {
-  margin: 20rem auto;
+.mycontainer {
+  margin: 5rem auto;
   border-radius: 10px;
   box-shadow: 10px 10px 10px 5px;
-  width: 27rem;
-  height: 27rem;
+  width: 30rem;
+  height: 33rem;
 }
-
+.mycard {
+  color: white;
+  font-size: 1.5rem;
+}
 .card-top {
   padding-bottom: 2rem;
   align-items: center;
@@ -13,8 +16,8 @@
 
 .card-top img {
   padding: 1rem;
-  width: 8rem;
-  height: 8rem;
+  width: 10rem;
+  height: 10rem;
   border-radius: 50%;
 }
 .card-bottom {
@@ -23,12 +26,15 @@
 }
 .card-bottom img {
   padding-left: 1rem;
-  width: 3rem;
-  margin-left: 1.5rem;
+  width: 4rem;
+  margin-left: 2rem;
 }
-
+.card-bottom h5 {
+  padding-right: 3rem;
+}
 .button {
   margin-top: 6rem;
+  border: ;
 }
 
 h5 {

@@ -37,11 +37,11 @@ const Card = () => {
   //   };
 
   return (
-    <div className="container bg-info  text-center">
+    <div className="mycontainer bg-info text-center">
       <div className="mycard">
-        <div className="card-top d-flex text-center justify-content-between">
+        <div className="card-top d-flex text-center justify-content-between ">
           <img src={picture?.large} alt="" />
-          <h3>
+          <h3 className="pe-5">
             {name?.title} {name?.first} {name?.last}
           </h3>
         </div>
@@ -53,20 +53,20 @@ const Card = () => {
           <img src={Phone} alt="" />
           <h5>{phone}</h5>
         </div>
-        <div className="card-bottom d-flex text-center justify-content-between">
+        <div className="card-bottom d-flex text-center justify-content-between  ">
           <img src={Location} alt="" />
           <h5>
             {location?.city} {location?.country}
           </h5>
         </div>
-        <div>
-          <p>{dob?.age}</p>
-          <p>{dob?.date}</p>
+        <div className="text-bottom text-white fw-bold ">
+          <p>Age: {dob?.age}</p>
+          <p>DOB: {new Date(dob?.date).toLocaleDateString("en-GB")}</p>
         </div>
       </div>
       <div className="button">
         <button
-          className="bg-info text-black p-2 rounded-2"
+          className="bg-info text-white p-2 rounded-2"
           onClick={getRandom}
         >
           RANDOM APP
